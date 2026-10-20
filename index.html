@@ -7,124 +7,145 @@
 </head>
 <body>
 
-    <div>
-        <div>Comprendre le HTML sémantique</div>
-        <div>Pourquoi bien choisir ses balises change tout</div>
-    </div>
+    <!-- En-tête de page : titre du site et introduction -->
+    <header>
+        <!-- Titre principal de la page (un seul h1 par page) -->
+        <h1>Comprendre le HTML sémantique</h1>
+        <!-- Sous-titre : phrase d'accroche, pas un titre de partie, donc p et non h2 -->
+        <p>Pourquoi bien choisir ses balises change tout</p>
+    </header>
 
-    <div>
-        <div>
-            <div><div>Qu'est-ce que le HTML ?</div></div>
-            <div><div>La sémantique</div></div>
-            <div><div>Les balises courantes</div></div>
-            <div><div>Ressources</div></div>
-        </div>
-    </div>
+    <!-- Navigation : liste de liens vers les parties de la page -->
+    <nav>
+        <!-- ul : liste non ordonnée (l'ordre des éléments n'a pas d'importance) -->
+        <ul>
+            <!-- li : un élément de la liste -->
+            <!-- Lien d'ancre : "#html" renvoie vers l'élément qui a id="html" dans cette page -->
+            <!-- Le texte cliquable se place ENTRE <a ...> et </a> -->
+            <li><a href="#html">Qu'est-ce que le HTML ?</a></li>
+            <li><a href="#semantique">La sémantique</a></li>
+            <li><a href="#balise">Les balises courantes</a></li>
+            <!-- Ressources : renvoie vers l'aside "Le saviez-vous ?" (ressource complémentaire) -->
+            <li><a href="#ressources">Ressources</a></li>
+        </ul>
+    </nav>
 
-    <div>
+    <!-- Contenu principal : le cœur du sujet -->
+    <main>
 
-        <div>
-            <div>Qu'est-ce que le HTML ?</div>
-            <div>
+        <!-- Section : regroupe un contenu sur un même thème -->
+        <!-- id="html" : nom unique de la section, cible du lien href="#html" du menu -->
+        <section id="html">
+            <!-- h2 : titre de la section (niveau juste en dessous du h1) -->
+            <h2>Qu'est-ce que le HTML ?</h2>
+            <!-- Paragraphe de texte -->
+            <p>
                 Le HTML (HyperText Markup Language) est le langage qui sert à structurer le contenu
                 d'une page web : les titres, les paragraphes, les images, les liens. C'est le squelette
                 de toute page que vous visitez sur internet.
-            </div>
-        </div>
+            </p>
+        </section>
 
-        <div>
-            <div>Pourquoi la sémantique ?</div>
-            <div>
+        <!-- Cible du lien href="#semantique" -->
+        <section id="semantique">
+            <h2>Pourquoi la sémantique ?</h2>
+            <p>
                 On pourrait tout écrire avec une seule balise passe-partout, et le résultat visuel
                 serait identique à l'écran. Mais une page construite ainsi est illisible pour les
                 technologies qui ne voient pas la page, comme les lecteurs d'écran utilisés par les
                 personnes malvoyantes, ou les robots des moteurs de recherche. La sémantique, c'est
                 choisir une balise qui décrit vraiment le rôle du contenu qu'elle contient.
-            </div>
-        </div>
+            </p>
+        </section>
 
-        <div>
-            <div>Les balises sémantiques courantes</div>
+        <!-- Cible du lien href="#balise" -->
+        <section id="balise">
+            <h2>Les balises sémantiques courantes</h2>
 
-            <div>
-                <div>L'en-tête de page</div>
-                <div>
+            <!-- Article : fiche autonome, qui garde son sens même lue seule -->
+            <article>
+                <!-- h3 : sous-titre, car ce bloc est à l'intérieur de la section (h2) -->
+                <h3>L'en-tête de page</h3>
+                <p>
                     Contient le titre du site et les informations d'introduction, généralement en
                     haut de la page. C'est la toute première chose que l'on voit.
-                </div>
-            </div>
+                </p>
+            </article>
 
-            <div>
-                <div>La navigation</div>
-                <div>
+            <article>
+                <h3>La navigation</h3>
+                <p>
                     Regroupe les liens qui permettent de se déplacer dans le site. On y trouve
                     souvent une liste de liens vers les grandes pages ou sections.
-                </div>
-            </div>
+                </p>
+            </article>
 
-            <div>
-                <div>Le contenu principal</div>
-                <div>
+            <article>
+                <h3>Le contenu principal</h3>
+                <p>
                     Il n'y en a qu'un seul par page : c'est le bloc qui contient le cœur du sujet,
                     tout ce qui n'est ni l'en-tête, ni la navigation, ni le pied de page.
-                </div>
-            </div>
+                </p>
+            </article>
 
-            <div>
-                <div>Une section et un article</div>
-                <div>
+            <article>
+                <h3>Une section et un article</h3>
+                <p>
                     Une section regroupe un ensemble de contenus liés par un même thème. Un article,
                     lui, est un contenu autonome, qui aurait du sens même republié seul ailleurs —
                     comme un billet de blog ou une fiche produit.
-                </div>
-            </div>
+                </p>
+            </article>
 
-            <div>
-                <div>Le pied de page</div>
-                <div>
+            <article>
+                <h3>Le pied de page</h3>
+                <p>
                     Contient les informations de fin de page : droits d'auteur, contact, liens
                     secondaires. Généralement tout en bas.
-                </div>
-            </div>
+                </p>
+            </article>
 
-        </div>
+        </section>
 
-        <div>
-            <div>Les 3 étapes pour rendre une page plus sémantique</div>
-            <div>
-                <div>Lire le contenu de chaque bloc et se demander à quoi il sert vraiment</div>
-                <div>Choisir la balise qui décrit le mieux ce rôle</div>
-                <div>Vérifier que le rendu visuel n'a pas changé</div>
-            </div>
-        </div>
+        <section>
+            <h2>Les 3 étapes pour rendre une page plus sémantique</h2>
+            <!-- ol : liste ordonnée, les étapes sont numérotées 1, 2, 3 car l'ordre compte -->
+            <ol>
+                <li>Lire le contenu de chaque bloc et se demander à quoi il sert vraiment</li>
+                <li>Choisir la balise qui décrit le mieux ce rôle</li>
+                <li>Vérifier que le rendu visuel n'a pas changé</li>
+            </ol>
+        </section>
 
-        <div>
-            <div>Le saviez-vous ?</div>
-            <div>
+        <!-- Aside : information complémentaire, en marge du sujet principal -->
+        <!-- (on pourrait la retirer sans que le sujet perde son sens) -->
+        <!-- Cible du lien href="#ressources" -->
+        <aside id="ressources">
+            <h2>Le saviez-vous ?</h2>
+            <p>
                 Les lecteurs d'écran permettent aux personnes malvoyantes de naviguer directement
                 d'une balise de navigation à une autre, ou de sauter tout un en-tête pour aller droit
                 au contenu principal. Sans sémantique, cette navigation rapide est impossible.
-            </div>
-        </div>
+            </p>
+        </aside>
 
-        <div>
-            <div>
-                <div>
-                    Exemple de structure sémantique : un en-tête, une navigation, un contenu
-                    principal découpé en sections, et un pied de page.
-                </div>
-            </div>
-        </div>
+        <!-- Simple paragraphe : les div autour ne servaient à rien, on les retire -->
+        <p>
+            Exemple de structure sémantique : un en-tête, une navigation, un contenu
+            principal découpé en sections, et un pied de page.
+        </p>
 
-    </div>
+    </main>
 
-    <div>
-        <div>© 2026 — Ressource pédagogique Simplon</div>
-        <div>
-            <div>Cité Numérique, 2 rue Marc Sangnier, 33130 Bègles</div>
-            <div>contact@exemple.com</div>
-        </div>
-    </div>
+    <!-- Pied de page : copyright et contact -->
+    <footer>
+        <p>© 2026 — Ressource pédagogique Simplon</p>
+        <!-- address : informations de contact (adresse, e-mail) -->
+        <address>
+            <p>Cité Numérique, 2 rue Marc Sangnier, 33130 Bègles</p>
+            <p>contact@exemple.com</p>
+        </address>
+    </footer>
 
 </body>
 </html>
